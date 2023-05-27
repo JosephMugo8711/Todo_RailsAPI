@@ -19,6 +19,12 @@ class TodosController < ApplicationController
         render json: todo, status: :accepted  
     end
 
+    def destroy
+        todo = find_todo
+        todo.destroy
+        head :no_content
+    end
+
 
     
     private
