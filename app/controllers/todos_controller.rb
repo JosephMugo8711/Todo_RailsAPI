@@ -13,6 +13,12 @@ class TodosController < ApplicationController
         render json: todo, status: :created   
     end
 
+    def update
+        todo = find_todo
+        todo.update!(todo_params) 
+        render json: todo, status: :accepted  
+    end
+
 
     
     private
