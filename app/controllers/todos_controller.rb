@@ -34,7 +34,7 @@ class TodosController < ApplicationController
     end
 
     def find_todo
-        todo.find(params[:id])
+        Todo.find(params[:id])
     end
 
     def todo_not_found
