@@ -4,6 +4,7 @@ class CreateTodos < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :description
       t.boolean :completed
+      t.string :date, default: Time.now, null: false
 
       t.timestamps
     end
