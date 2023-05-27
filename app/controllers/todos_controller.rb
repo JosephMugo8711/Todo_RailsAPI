@@ -4,6 +4,11 @@ class TodosController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :unprocessable_entity
 
 
+    def index
+        render json: Task.all, status: :ok    
+    end
+
+
     
     private
 
