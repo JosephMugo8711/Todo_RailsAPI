@@ -5,7 +5,12 @@ class TodosController < ApplicationController
 
 
     def index
-        render json: Task.all, status: :ok    
+        render json: Todo.all, status: :ok    
+    end
+
+    def create
+        todo = Todo.create!(todo_params) 
+        render json: todo, status: :created   
     end
 
 
