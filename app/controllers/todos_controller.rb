@@ -30,11 +30,11 @@ class TodosController < ApplicationController
     private
 
     def todo_params
-        params.permit(:name, :description, :completed)
+        params.require(:todo).permit(:name, :description, :completed)
     end
 
     def find_todo
-        Todo.find(params[:id])
+        Todo.find_by(params[:id])
     end
 
     def todo_not_found
