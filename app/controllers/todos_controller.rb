@@ -34,8 +34,9 @@ class TodosController < ApplicationController
     end
 
     def find_todo
-        Todo.find_by(params[:id])
+        Todo.find(params[:id])
     end
+      
 
     def todo_not_found
         render json: {error: 'todo not found'}, status: :not_found
