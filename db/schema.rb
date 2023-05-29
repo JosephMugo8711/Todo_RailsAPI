@@ -14,8 +14,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_27_172358) do
   create_table "todos", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.boolean "completed"
-    t.string "date", default: "2023-05-27 17:31:20.266183", null: false
+    t.boolean "done", default: false
+    t.string "date", default: "2023-05-29 13:43:28.984570", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

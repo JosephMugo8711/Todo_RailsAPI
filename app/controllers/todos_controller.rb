@@ -13,6 +13,13 @@ class TodosController < ApplicationController
         render json: todo, status: :created   
     end
 
+    def complete
+        todo = find_todo
+        todo.update(completed: true)
+        render json: todo, status: :ok
+    end
+      
+
     def update
         todo = find_todo
         todo.update!(todo_params) 
@@ -30,7 +37,7 @@ class TodosController < ApplicationController
     private
 
     def todo_params
-        params.require(:todo).permit(:name, :description, :completed)
+        params.require(:todo).permit(:name, :description, :done)
     end
 
     def find_todo
