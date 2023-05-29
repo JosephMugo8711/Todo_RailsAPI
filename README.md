@@ -7,9 +7,6 @@
 A simple Todo List application using Ruby on Rails for the backend. The application allows users to create, read, update,
 and delete todo items.
 ******
-##Screenshot
-
-![optica](https://user-images.githubusercontent.com/91910681/235597633-7a4a6e1a-e2f9-49a1-845b-7d997eb0e24f.jpg)
 
 *****
 ## SetUp Instruction
